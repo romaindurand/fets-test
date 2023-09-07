@@ -1,0 +1,14 @@
+{
+  "include": ["client.ts"],
+  "exclude": ["./node_modules"],
+  "compilerOptions": {
+    "noEmit": true,
+    "allowJs": true,
+    "module": "esnext",
+    "target": "es2020",
+    "moduleResolution": "Node"
+  },
+  "ts-node": {
+    "esm": true
+  }
+}
