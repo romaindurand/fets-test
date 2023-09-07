@@ -12,13 +12,14 @@ const client = createClient<NormalizeOAS<typeof spotifyOAS>>({
   endpoint: "https://api.spotify.com/v1",
 });
 
-const response = await client["/users/{user_id}/playlists"].get({
+const response = await client["/users/{user_id}/playlists"].post({
   headers: {
     Authorization: `Bearer ${process.env.SPOTIFY_TOKEN}`,
   },
   params: {
     user_id: "1150651118",
   },
+  json: {}
 });
 
 if (!response.ok) {
